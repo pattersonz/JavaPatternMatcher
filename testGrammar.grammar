@@ -1,0 +1,6 @@
+BOOLEAN_PROPERTY := BOOL_PROP_BODY
+BOOL_PROP_BODY := t_parent:name!=statement REFERENCE_CHAIN_START t_method_call:type=bool
+BOOL_PROP_BODY := t_parent:name!=statement REFERENCE_CHAIN_START t_object:type=bool
+REFERENCE_CHAIN :=
+REFERENCE_CHAIN := t_object t_field_access REFERENCE_CHAIN
+REFERENCE_CHAIN := t_method_call t_field_access REFERENCE_CHAIN
